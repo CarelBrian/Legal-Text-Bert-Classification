@@ -15,7 +15,7 @@ Le fichier `bert_classification.py` contient l'implémentation complète de l'en
 
 ### Étapes principales
 
-- **Préparation des données** : Chargement et transformation des données depuis un fichier CSV en un dataset PyTorch. Chaque entrée comprend le texte d'un cas juridique (`case_text`) et son résultat (`case_outcome`). Les textes sont tokenisés et les labels encodés.
+- **Préparation des données** : Chargement et transformation des données depuis un fichier CSV en un dataset PyTorch. Chaque entrée comprend le texte d'un cas juridique (`case_text`) et son résultat (`case_outcome`). La variable d'intérêt "case_outcome" a 10 modalités et donc nous avons 10 classes pour notre classification. Les textes sont tokenisés et les labels encodés.
 
 - **Définition du modèle** : Utilisation de `BertModel` de la bibliothèque `transformers` (modèle BERT pré-entraîné (`bert-base-uncased`) comme base) et ajout d'une couche de classification linéaire audessus du modèle BERT pour prédire les résultats des cas.
 
